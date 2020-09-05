@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Authors</title>
+    <link rel="stylesheet" type="text/css" href="css/my-style.css">
+
+</head>
+<body>
+
+<h2>All Authors</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Number Of Books</th>
+        <th>Age</th>
+
+    </tr>
+
+    <tr th:each="author : ${authors}">
+        <td th:text="${author.name}"></td>
+        <td th:text="${#lists.size(author.books)}"></td>
+        <td th:text="${author.age}"></td>
+
+
+    </tr>
+</table>
+
+
+<a href='http://localhost:8080/'><button>Go to home page</button></a>
+<a href='http://localhost:8080/insertAuthors'><button>Insert or update an author</button> </a>
+
+
+</body>
+</html>

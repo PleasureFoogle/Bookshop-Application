@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/my-style.css">
+    <title>Bookshops</title>
+
+</head>
+<body>
+
+<h2>All Bookshops</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Books In Store</th>
+        <th>Distance</th>
+    </tr>
+
+    <tr th:each="bookshop : ${bookshops}">
+        <td th:text="${bookshop.name}"></td>
+        <td th:text="${#lists.size(bookshop.booksInStock)}"></td>
+        <td th:text="${bookshop.distanceInKilometers}"></td>
+    </tr>
+</table>
+
+
+<a href='http://localhost:8080/'><button>Go to home page</button></a>
+<a href='http://localhost:8080/insertBookshops'> <button>Insert or update a bookshop</button> </a>
+
+
+</body>
+</html>

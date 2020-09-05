@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/my-style.css">
+    <title>Home</title>
+
+</head>
+<body>
+
+<a href='http://localhost:8080/bookshop'><button>Go to bookshops</button></a>
+<a href='http://localhost:8080/author'><button>Go to authors</button></a>
+<a href='http://localhost:8080/book'><button>Go to books</button></a>
+
+<form id="logout-button" class="form-inline my-2 my-lg-0" form-method="post" th:action="@{/logout}">
+    <button sec:authorize="isAuthenticated()" class="btn btn-outline-danger my-2 my-sm-0 btn-sm" type="submit">Logout</button>
+</form>
+<form action="" method="post">
+    <button name="importJson" value="importJson">Insert Data from JSON and XML</button>
+</form>
+<a href='http://localhost:8080/clearData'><button>Clear all data</button></a>
+
+<h2>Books</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Number of Pages</th>
+    </tr>
+
+    <tr th:each="book : ${books}">
+        <td th:text="${book.name}"></td>
+        <td th:text="${book.author?.name}"></td>
+        <td th:text="${book.numberOfPages}"></td>
+    </tr>
+</table>
+
+<h2>Bookshops</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Books In Store</th>
+        <th>Distance</th>
+    </tr>
+
+    <tr th:each="bookshop : ${bookshops}">
+        <td th:text="${bookshop.name}"></td>
+        <td th:text="${#lists.size(bookshop.booksInStock)}"></td>
+        <td th:text="${bookshop.distanceInKilometers}"></td>
+    </tr>
+</table>
+
+<h2>Authors</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Number Of Books</th>
+        <th>Age</th>
+
+    </tr>
+
+    <tr th:each="author : ${authors}">
+        <td th:text="${author.name}"></td>
+        <td th:text="${#lists.size(author.books)}"></td>
+        <td th:text="${author.age}"></td>
+
+
+    </tr>
+</table>
+
+
+</body>
+</html>

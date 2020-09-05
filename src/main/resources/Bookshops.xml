@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookshops>
+    <bookshop>
+        <booksInStock>Ne moga da stana</booksInStock>
+        <distanceInKilometers>23</distanceInKilometers>
+        <name>Ne znam kak da se kazva</name>
+    </bookshop>
+    <bookshop>
+        <booksInStock>Imam Diskopatiq</booksInStock>
+        <distanceInKilometers>75</distanceInKilometers>
+        <name>Scoro Shte Falirame</name>
+    </bookshop>
+    <bookshop>
+        <booksInStock>Sam sreshtu Edin</booksInStock>
+        <distanceInKilometers>88</distanceInKilometers>
+        <name>We don't have the book</name>
+    </bookshop>
+</bookshops>

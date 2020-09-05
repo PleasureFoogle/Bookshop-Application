@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Bookshop for Books",
+    "distanceInKilometers": 420,
+    "booksInStock" : "Kak da qdem"
+  },
+  {
+    "name": "AAAAAAAA",
+    "distanceInKilometers": 1,
+    "booksInStock" : "Tishina i Shum"
+  },
+  {
+    "name": "Na baba ti bookshopa",
+    "distanceInKilometers": 46
+  }
+]

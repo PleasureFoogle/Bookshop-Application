@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <link rel="stylesheet" type="text/css" href="css/my-style.css">
+</head>
+<body>
+
+<h2>All Books</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Number of Pages</th>
+    </tr>
+
+    <tr th:each="book : ${books}">
+        <td th:text="${book.name}"></td>
+        <td th:text="${book.author?.name}"></td>
+        <td th:text="${book.numberOfPages}"></td>
+    </tr>
+</table>
+
+
+<a href='http://localhost:8080/'><button>Go to home page</button></a>
+<a href='http://localhost:8080/insertBooks'> <button>Insert or update a book</button> </a>
+
+
+
+</body>
+</html>

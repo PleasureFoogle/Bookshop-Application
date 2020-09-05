@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/my-style.css">
+</head>
+<body>
+
+<h2>Insert Bookshop</h2>
+
+<form id="bookshopForm" action="" method="post">
+    <label >Bookshop Name:</label><br>
+    <input type="text" id="name" name="bookshop_name"><br>
+    <label >Distance in kilometers:</label><br>
+    <input type="text" id="distance" name="bookshop_distance" ><br><br>
+    <label >List of books in stock:</label><br>
+    <label >Please fill this area with the names of the books separated by ", " (a comma and a space).</label><br>
+    <textarea id="books_list" name="books_list" rows="9" cols="100"></textarea>
+    <input type="submit" formmethod="post" id="submitBookshopBooks" name="submit" value="Submit" />
+</form>
+<a href='http://localhost:8080/'><button>Go to home page</button></a>
+
+</body>
+</html>

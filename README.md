@@ -1,3 +1,2 @@
 # myapplication
-bookshop application
-An application for storing information about books, authors and bookshops.
+This bookshop application is for storing information about books, authors and bookshops.

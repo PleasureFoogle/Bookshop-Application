@@ -1,2 +1,2 @@
-# myapplication
+# Bookshop-Application
 This bookshop application is for storing information about books, authors and bookshops.
